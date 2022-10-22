@@ -9,7 +9,14 @@ function index() {
       <a>
           Products Page        
       </a>
+              </Link>
+              <div>
+              <Link href="/post">
+          <a>
+          Post List       
+         </a>
       </Link>
+             </div>
      </div>
       </div>
       

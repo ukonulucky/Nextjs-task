@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from "next/router"
-function all() {
+function All() {
     const router = useRouter()
     const { params = []} = router.query
     if (params.length == 1 ) {
@@ -20,4 +20,4 @@ function all() {
 
 }
 
-export default all
+export default All

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from "next/router"
-function reviewId() {
+function ReviewId() {
     const router = useRouter()
     const { productId, reviewId } = router.query
     return   (
@@ -8,4 +8,4 @@ function reviewId() {
  )
   
 }
-export default reviewId
+export default ReviewId
