@@ -30,10 +30,11 @@ export default Index
 export async function getStaticProps() {
     try {
         const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
+      
         if (res) {
             return {
                 props: {
-                    users: res.data
+                    users: res.data.slice(0,7)
                 }
             }
         }

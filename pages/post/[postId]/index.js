@@ -2,6 +2,11 @@ import Reac, {useState } from 'react'
 import { useRouter } from "next/router"
 import axios from "axios"
 function Index({ user }) { 
+    const router = useRouter()
+    if (router.isFallback) {
+        return <h2>Loading....</h2>
+    }
+   
   return (
       <div>
           <p>{user.title}</p>
@@ -17,6 +22,7 @@ export async function getStaticProps(context) {
     try {
         const { params } = context
         const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+      
         if (res) {
             return {
                 props: {
@@ -26,7 +32,10 @@ export async function getStaticProps(context) {
           
       }
  } catch (error) {
-    console.log(error.message)
+     return {
+           notFound: true
+       }  
+    
  }
 }
 
@@ -69,6 +78,6 @@ export async function getStaticPaths() {
                 }
             }
         ],
-        fallback:false
+        fallback:true
     }
 }
