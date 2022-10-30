@@ -1,0 +1,6 @@
+.footer, .header{
+    background-color:purple;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}

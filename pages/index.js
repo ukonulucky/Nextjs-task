@@ -1,26 +1,41 @@
 import React from 'react'
 import Link from 'next/link'
+import { signIn, signOut, useSession, getSession} from "next-auth/react"
 
-function index() {
+function Index() {
+    const { data: session, status } = useSession()
+  
+    console.log(session, status)
+    const handleSignIn = (e) => {
+        e.preventDefault()
+        signIn("github")
+    }
+    const handleSignOut = (e) => {
+        e.preventDefault()
+        signOut()
+   }
   return (
-      <div> Home page
-          <div>
-          <Link href="/products/1">
-      <a>
-          Products Page        
-      </a>
-              </Link>
-              <div>
-              <Link href="/post">
-          <a>
-          Post List       
-         </a>
-      </Link>
-             </div>
-     </div>
-      </div>
-      
+      <div className="div">
+          {
+              status.loading && <p>Loading...</p>
+         }
+          {
+              !session && <a href="" onClick={handleSignIn}>Sign In</a>
+          }
+          {
+              session && <div className="text">
+                  <p>{session.user.name}, {session.user.email}</p>
+                  <img
+                    src={session.user.image}
+                      alt="display picture"
+                      width="100px"
+                      height="150px"
+                  />
+                  <a href="" onClick={handleSignOut}>Sign Out</a>
+              </div>
+          }
+   </div>
   )
 }
 
-export default index
+export default Index

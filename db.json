@@ -1,0 +1,86 @@
+{
+    "events":
+     [
+        {
+            "id":1,
+            "title":"event 1",
+            "description":"description 1",
+            "category":"dancing",
+            "date":"April 4"
+           },
+           {
+            "id":2,
+            "title":"event 2",
+            "description":"description 2",
+            "category":"coding",
+            "date":"may 4"
+           },
+           {
+            "id":3,
+            "title":"event 3",
+            "description":"description 3",
+            "category":"writing",
+            "date":"March 10"
+           },
+           {
+            "id":4,
+            "title":"event 4",
+            "description":"description 4",
+            "category":"washing",
+            "date":"October 10"
+           }
+    ],
+    "dashboard":{
+      "post":500,
+      "likes": 20,
+      "following":120,
+      "followers":300
+    },
+
+    "products": [
+        {
+            "id":1,
+            "name":"name1",
+            "price":"1200",
+            "description":"descript 1"
+        },
+        {
+            "id":2,
+            "name":"name2",
+            "price":1800,
+            "description":"descript 3"
+        },
+        {
+            "id":3,
+            "name":"name3",
+            "price":1500,
+            "description":"descript 3"
+        },
+        {
+            "id":4,
+            "name":"name999990",
+            "price":1600,
+            "description":"just changed"
+        }
+    ],
+    "news":[
+        {
+            "id":1,
+            "title":"news 1",
+            "description":"description 1",
+            "category":"football"
+        },
+        {
+            "id":2,
+            "title":"news 2",
+            "description":"description 2",
+            "category":"entertainment"
+        },
+        {
+            "id":3,
+            "title":"news 3",
+            "description":"description 3",
+            "category":"cartoon"
+        }
+    ]
+}
